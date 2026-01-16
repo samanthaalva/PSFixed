@@ -1,0 +1,102 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------- HEADER --------------------------- */
+header {
+    display: grid;
+    grid-template-columns: 44px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+
+}
+
+
+/* --------------------------- BODY --------------------------- */
+
+
+.intro {
+    text-align: center;
+    h2 {
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+    .introP {
+       text-align: center;
+        max-width: 47%;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+}
+
+.alive {
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: 400;
+}
+
+section.eventCard {
+    display: block;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: $sColor;
+    max-width: 40%;
+    text-align: center;
+    
+    h2 {
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    a {
+        color: $pColor;
+        font-weight: 700;
+        text-decoration: none;
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* --------------------------- FOOTER --------------------------- */
+footer {
+    background-color: $greyColor;
+    padding: 2rem;
+    margin: 0;
+    color: white;
+    text-align: center;
+    a {
+        color: $sColor;
+        text-decoration: none;
+        :hover {
+            cursor: pointer;
+        }
+    }
+}
