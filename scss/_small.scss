@@ -11,7 +11,9 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-} // end all elements
+}
+
+// end all elements
 
 /* --------------------------- BODY --------------------------- */
 body {
@@ -32,7 +34,7 @@ header {
 }
 
 /* --------------------------- HERO IMAGE --------------------------- */
-section.hero img{
+section.hero img {
     width: 100%;
     height: auto;
 }
@@ -40,27 +42,64 @@ section.hero img{
 
 /* --------------------------- BODY --------------------------- */
 
-
+/* Intro Section */
 .intro {
     text-align: center;
+
     h2 {
         font-weight: 500;
         font-size: 1.5rem;
     }
+
     .introP {
-       text-align: center;
+        text-align: center;
         max-width: 80%;
         margin: 0 auto;
         font-size: 1.1rem;
     }
 }
 
-.alive {
+.alive,
+.join {
     text-align: center;
     padding: 2rem 0;
     font-weight: 400;
 }
 
+/* Join Section */
+#joinSection {
+    display: flex;
+    flex-direction: column;
+    gap: $gutter;
+    margin: $gutter;
+
+    div {
+        background-color: $greyColor;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+
+        img {
+            max-width: 60%;
+            height: auto;
+            align-self: center;
+            clip-path: circle(50% at 50% 50%);
+        }
+    }
+}
+
+
+
+
+
+
+
+/* Event Section */
 section.eventCard {
     display: block;
     align-items: center;
@@ -70,21 +109,23 @@ section.eventCard {
     background-color: $sColor;
     max-width: 90%;
     text-align: center;
-    
+
     h2 {
         font-weight: 500;
         font-size: 1.8rem;
         margin-bottom: .5rem;
     }
-    
+
     p {
         font-size: 1rem;
         line-height: 1.5;
     }
+
     a {
         color: $pColor;
         font-weight: 700;
         text-decoration: none;
+
         :hover {
             cursor: pointer;
         }
@@ -98,11 +139,28 @@ footer {
     margin: 0;
     color: white;
     text-align: center;
-    a {
-        color: $sColor;
-        text-decoration: none;
-        :hover {
-            cursor: pointer;
+
+    div {
+        display: flex;              // Keeps icon and text together
+        align-items: center;        // Aligns them vertically
+        justify-content: left;
+        padding: 0.5rem 0;
+
+        img {
+            flex-shrink: 0;         // Prevents icon from shrinking
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5rem;
+        }
+
+        a {
+            color: $sColor;
+            text-decoration: none;
+            text-align: left;       // Optional: keeps long text left-aligned
+
+            :hover {
+                cursor: pointer;
+            }
         }
     }
 }
