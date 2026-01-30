@@ -314,6 +314,80 @@ html {
   box-sizing: border-box;
 }
 
+header {
+  display: grid;
+  grid-template-columns: auto 44px;
+  column-gap: 20px;
+  align-items: center;
+}
+
+/* --------------------------- NAVIGATION HERE --------------------------- */
+#hamburgerBtn {
+  position: relative;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  left: 25%;
+  background-color: #24315D;
+  transition: all 0.4s ease;
+}
+
+.top {
+  top: 33%;
+}
+
+.bottom {
+  top: 62%;
+}
+
+#hamburgerBtn.open .top {
+  transform: rotate(45deg);
+  top: 48%;
+  width: 60%;
+  left: 20%;
+}
+#hamburgerBtn.open .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
+  width: 60%;
+  left: 20%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  font-size: 1.2rem;
+}
+
+nav ul.active {
+  display: block;
+}
+
+li a {
+  color: #24315D;
+  display: block;
+  padding: 0.75rem 20px;
+  text-decoration: none;
+}
+
+li.active a {
+  color: white;
+  background-color: #24315D;
+}
+
+li.hover a {
+  background-color: #E7DCFE;
+}
+
 /* --------------------------- BODY --------------------------- */
 body {
   font-family: "Montserrat", sans-serif;
@@ -325,10 +399,18 @@ body {
 /* --------------------------- HEADER --------------------------- */
 header {
   display: grid;
-  grid-template-columns: 44px auto;
+  grid-template-columns: 44px auto 44px;
+  grid-template-rows: auto auto;
   column-gap: 20px;
   align-items: center;
   padding: 0.5rem 20px;
+  background-color: white;
+  color: #24315D;
+}
+
+#navWrapper {
+  grid-column: 1/-1;
+  grid-row: 2;
 }
 
 /* --------------------------- HERO IMAGE --------------------------- */
@@ -518,6 +600,16 @@ footer div a:hover {
 }
 
 @media only screen and (min-width: 35rem) {
+  nav {
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    padding: 0.5rem 1.2rem;
+    transition: background 0.5s linear;
+  }
+  ul li a:hover {
+    background-color: #E7DCFE;
+  }
   #joinSection {
     flex-direction: row;
     justify-content: space-evenly;
@@ -540,7 +632,8 @@ footer div a:hover {
     max-width: 70%;
   }
   .companyMission img {
-    width: 20%;
+    max-width: 150px;
+    width: 100%;
     height: auto;
   }
   #sorry {
@@ -590,10 +683,29 @@ footer div a:hover {
   /* --------------------------- HEADER --------------------------- */
   header {
     display: grid;
-    grid-template-columns: 44px auto;
+    grid-template-columns: 44px auto 44px 1fr;
+    grid-template-rows: auto;
     column-gap: 20px;
     align-items: center;
     padding: 0.5rem 20px;
+    font-size: 1.5rem;
+  }
+  /* --------------------------- NAVIGATION --------------------------- */
+  #hamburgerBtn {
+    display: none;
+  }
+  #navWrapper {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+  }
+  nav li a {
+    border-bottom: none;
   }
   /* --------------------------- BODY --------------------------- */
   .intro {
@@ -664,7 +776,8 @@ footer div a:hover {
     margin: 0 10rem;
   }
   .companyMission img {
-    width: 20%;
+    max-width: 150px;
+    width: 100%;
     height: auto;
   }
 }

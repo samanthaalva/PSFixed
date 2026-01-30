@@ -15,6 +15,75 @@ html {
 
 // end all elements
 
+
+header {
+    display: grid;
+    grid-template-columns: auto 44px;
+    column-gap: $gutter;
+    align-items: center; //vertically
+}
+/* --------------------------- NAVIGATION HERE --------------------------- */
+#hamburgerBtn {
+  position: relative;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+
+}
+.top,
+.bottom {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  left: 25%;
+  background-color: $pColor;
+  transition: all 0.4s ease;
+}
+.top {
+  top: 33%;
+}
+.bottom {
+  top: 62%;
+} //End of Hamburger
+
+#hamburgerBtn.open {
+  .top {
+    transform: rotate(45deg);
+    top: 48%;
+    width: 60%;
+    left: 20%;
+  }
+  .bottom {
+    transform: rotate(-45deg);
+    top: 48%;
+    width: 60%;
+    left: 20%;
+  }
+} //End of Open Class (Navigationn)
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  font-size: 1.2rem;
+}
+nav ul.active {
+  display: block;
+}
+li a {
+  color: $pColor;
+  display: block;
+  padding: 0.75rem $gutter;
+  text-decoration: none;
+}
+li.active a {
+  color: white;
+  background-color: $pColor;
+}
+li.hover a {
+    background-color: $sColor;
+}
 /* --------------------------- BODY --------------------------- */
 body {
     font-family: $defaultFont;
@@ -26,11 +95,18 @@ body {
 /* --------------------------- HEADER --------------------------- */
 header {
     display: grid;
-    grid-template-columns: 44px auto;
+    grid-template-columns: 44px auto 44px;
+    grid-template-rows: auto auto;
     column-gap: $gutter;
     align-items: center; //vertically
     padding: .5rem $gutter;
+    background-color: white;
+    color: $pColor;
+}
 
+#navWrapper {
+    grid-column: 1 / -1;
+    grid-row: 2;
 }
 
 /* --------------------------- HERO IMAGE --------------------------- */

@@ -24,13 +24,34 @@ body {
 /* --------------------------- HEADER --------------------------- */
 header {
     display: grid;
-    grid-template-columns: 44px auto;
+    grid-template-columns: 44px auto 44px 1fr;
+    grid-template-rows: auto;
     column-gap: $gutter;
     align-items: center; //vertically
     padding: .5rem $gutter;
-
+    font-size: 1.5rem;
 }
 
+/* --------------------------- NAVIGATION --------------------------- */
+#hamburgerBtn {
+    display: none;
+}
+
+#navWrapper {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    font-size: 1.3rem;
+}
+
+nav li a {
+    border-bottom: none;
+}
 
 /* --------------------------- BODY --------------------------- */
 
@@ -107,7 +128,8 @@ footer {
 .companyMission {
     margin: 0 10rem;
     img {
-        width: 20%;
+        max-width: 150px;
+        width: 100%;
         height: auto;
     }
 }
