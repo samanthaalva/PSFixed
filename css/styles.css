@@ -378,6 +378,10 @@ section.hero img {
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+#joinSection div:hover {
+  transform: scale(1.05);
 }
 #joinSection div img {
   max-width: 60%;
@@ -399,6 +403,10 @@ section.eventCard {
   background-color: #E7DCFE;
   max-width: 90%;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+section.eventCard:hover {
+  transform: scale(1.05);
 }
 section.eventCard h2 {
   font-weight: 500;
@@ -414,12 +422,13 @@ section.eventCard a {
   font-weight: 700;
   text-decoration: none;
 }
-section.eventCard a :hover {
+section.eventCard a:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 /*Contest Section*/
-#contestTitle {
+#contestTitle, #currentInfo {
   text-align: center;
   font-weight: 400;
   font-size: 1.5rem;
@@ -429,7 +438,7 @@ section.eventCard a :hover {
   padding: 1rem 0;
 }
 
-#contestCard, #nfspsPage {
+#contestCard, #nfspsPage, #infoCard, #byLawsCard {
   display: block;
   align-items: center;
   border-radius: 8px;
@@ -440,7 +449,7 @@ section.eventCard a :hover {
   max-width: 90%;
   text-align: center;
 }
-#contestCard a, #nfspsPage a {
+#contestCard a, #nfspsPage a, #infoCard a, #byLawsCard a {
   display: block;
   margin: 0.5rem 0;
   border: 2px solid #E7DCFE;
@@ -450,7 +459,7 @@ section.eventCard a :hover {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-#contestCard a:hover, #nfspsPage a:hover {
+#contestCard a:hover, #nfspsPage a:hover, #infoCard a:hover, #byLawsCard a:hover {
   cursor: pointer;
   color: #E7DCFE;
   border: 2px solid white;
@@ -467,6 +476,15 @@ section.eventCard a :hover {
 .companyMission img {
   width: 35%;
   height: auto;
+}
+
+#sorry {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #E7DCFE;
+  padding: 1rem 0;
+  margin-bottom: 0;
 }
 
 /* --------------------------- FOOTER --------------------------- */
@@ -518,12 +536,15 @@ footer div a:hover {
     flex: 0 0 48%;
   }
   #contestCard,
-  #nfspsPage {
+  #nfspsPage, #infoCard, #byLawsCard {
     max-width: 70%;
   }
   .companyMission img {
     width: 20%;
     height: auto;
+  }
+  #sorry {
+    font-size: 1.2rem;
   }
   footer {
     display: flex;
@@ -636,7 +657,7 @@ footer div a:hover {
     cursor: pointer;
   }
   #contestCard,
-  #nfspsPage {
+  #nfspsPage, #infoCard, #byLawsCard {
     max-width: 50%;
   }
   .companyMission {

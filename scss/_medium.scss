@@ -23,7 +23,7 @@
 }
 
 #contestCard,
-#nfspsPage {
+#nfspsPage, #infoCard, #byLawsCard {
     max-width: 70%;
 
 }
@@ -32,6 +32,10 @@
         width: 20%;
         height: auto;
     }
+}
+
+#sorry {
+    font-size: 1.2rem;
 }
 
 footer {
