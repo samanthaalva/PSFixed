@@ -62,8 +62,9 @@ section.hero img {
 .alive,
 .join {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-weight: 400;
+    background-color: $tColor;
 }
 
 /* Join Section */
@@ -90,13 +91,11 @@ section.hero img {
             align-self: center;
             clip-path: circle(50% at 50% 50%);
         }
+        h2 {
+            font-size: 1.2rem;
+        }
     }
 }
-
-
-
-
-
 
 
 /* Event Section */
@@ -132,6 +131,56 @@ section.eventCard {
     }
 }
 
+
+/*Contest Section*/
+#contestTitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: $tColor;
+    padding: 1rem 0;
+}
+#contestCard, #nfspsPage {
+    display: block;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: $greyColor;
+    color: white;
+    max-width: 90%;
+    text-align: center;
+    a {
+        display: block;
+        margin: 0.5rem 0;
+        border: 2px solid $sColor;
+        border-radius: 4px;
+        padding: $gutter;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            cursor: pointer;
+            color: $sColor;
+            border: 2px solid white;
+            background-color: #636363;
+        }
+    }
+}
+.companyMission {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    align-items: center;
+    img {
+        width: 35%;
+        height: auto;
+    }
+}
+
 /* --------------------------- FOOTER --------------------------- */
 footer {
     background-color: $greyColor;
@@ -141,13 +190,13 @@ footer {
     text-align: center;
 
     div {
-        display: flex;              // Keeps icon and text together
-        align-items: center;        // Aligns them vertically
+        display: flex; // Keeps icon and text together
+        align-items: center; // Aligns them vertically
         justify-content: left;
         padding: 0.5rem 0;
 
         img {
-            flex-shrink: 0;         // Prevents icon from shrinking
+            flex-shrink: 0; // Prevents icon from shrinking
             width: 30px;
             height: 30px;
             margin-right: 0.5rem;
@@ -156,10 +205,11 @@ footer {
         a {
             color: $sColor;
             text-decoration: none;
-            text-align: left;       // Optional: keeps long text left-aligned
+            text-align: left; 
 
-            :hover {
+            &:hover {
                 cursor: pointer;
+                color: $tColor;
             }
         }
     }

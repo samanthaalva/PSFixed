@@ -356,8 +356,9 @@ section.hero img {
 .alive,
 .join {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-weight: 400;
+  background-color: #ffe6cc;
 }
 
 /* Join Section */
@@ -383,6 +384,9 @@ section.hero img {
   height: auto;
   align-self: center;
   clip-path: circle(50% at 50% 50%);
+}
+#joinSection div h2 {
+  font-size: 1.2rem;
 }
 
 /* Event Section */
@@ -414,6 +418,57 @@ section.eventCard a :hover {
   cursor: pointer;
 }
 
+/*Contest Section*/
+#contestTitle {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: #ffe6cc;
+  padding: 1rem 0;
+}
+
+#contestCard, #nfspsPage {
+  display: block;
+  align-items: center;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #4A4A4A;
+  color: white;
+  max-width: 90%;
+  text-align: center;
+}
+#contestCard a, #nfspsPage a {
+  display: block;
+  margin: 0.5rem 0;
+  border: 2px solid #E7DCFE;
+  border-radius: 4px;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+#contestCard a:hover, #nfspsPage a:hover {
+  cursor: pointer;
+  color: #E7DCFE;
+  border: 2px solid white;
+  background-color: #636363;
+}
+
+.companyMission {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  align-items: center;
+}
+.companyMission img {
+  width: 35%;
+  height: auto;
+}
+
 /* --------------------------- FOOTER --------------------------- */
 footer {
   background-color: #4A4A4A;
@@ -439,8 +494,9 @@ footer div a {
   text-decoration: none;
   text-align: left;
 }
-footer div a :hover {
+footer div a:hover {
   cursor: pointer;
+  color: #ffe6cc;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -460,6 +516,14 @@ footer div a :hover {
   }
   #events section.eventCard {
     flex: 0 0 48%;
+  }
+  #contestCard,
+  #nfspsPage {
+    max-width: 70%;
+  }
+  .companyMission img {
+    width: 20%;
+    height: auto;
   }
   footer {
     display: flex;
@@ -570,5 +634,16 @@ footer div a :hover {
   }
   footer a :hover {
     cursor: pointer;
+  }
+  #contestCard,
+  #nfspsPage {
+    max-width: 50%;
+  }
+  .companyMission {
+    margin: 0 10rem;
+  }
+  .companyMission img {
+    width: 20%;
+    height: auto;
   }
 }
