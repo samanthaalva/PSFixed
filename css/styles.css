@@ -373,7 +373,7 @@ nav ul.active {
 }
 
 li a {
-  color: #24315D;
+  color: #8b8b8b;
   display: block;
   padding: 0.75rem 20px;
   text-decoration: none;
@@ -520,7 +520,7 @@ section.eventCard a:hover {
   padding: 1rem 0;
 }
 
-#contestCard, #nfspsPage, #infoCard, #byLawsCard {
+#contestCard, #nfspsPage, #infoCard {
   display: block;
   align-items: center;
   border-radius: 8px;
@@ -531,7 +531,10 @@ section.eventCard a:hover {
   max-width: 90%;
   text-align: center;
 }
-#contestCard a, #nfspsPage a, #infoCard a, #byLawsCard a {
+#contestCard #winners, #nfspsPage #winners, #infoCard #winners {
+  color: rgb(148, 148, 148);
+}
+#contestCard a, #nfspsPage a, #infoCard a {
   display: block;
   margin: 0.5rem 0;
   border: 2px solid #E7DCFE;
@@ -541,7 +544,7 @@ section.eventCard a:hover {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-#contestCard a:hover, #nfspsPage a:hover, #infoCard a:hover, #byLawsCard a:hover {
+#contestCard a:hover, #nfspsPage a:hover, #infoCard a:hover {
   cursor: pointer;
   color: #E7DCFE;
   border: 2px solid white;

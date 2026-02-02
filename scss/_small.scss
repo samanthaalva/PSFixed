@@ -72,7 +72,7 @@ nav ul.active {
   display: block;
 }
 li a {
-  color: $pColor;
+  color: #8b8b8b;
   display: block;
   padding: 0.75rem $gutter;
   text-decoration: none;
@@ -229,7 +229,7 @@ section.eventCard {
     background-color: $tColor;
     padding: 1rem 0;
 }
-#contestCard, #nfspsPage, #infoCard, #byLawsCard {
+#contestCard, #nfspsPage, #infoCard{
     display: block;
     align-items: center;
     border-radius: 8px;
@@ -239,6 +239,9 @@ section.eventCard {
     color: white;
     max-width: 90%;
     text-align: center;
+    #winners {
+        color: rgb(148, 148, 148);
+    }
     a {
         display: block;
         margin: 0.5rem 0;
