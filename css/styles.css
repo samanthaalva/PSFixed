@@ -384,10 +384,6 @@ li.active a {
   background-color: #24315D;
 }
 
-li.hover a {
-  background-color: #E7DCFE;
-}
-
 /* --------------------------- BODY --------------------------- */
 body {
   font-family: "Montserrat", sans-serif;
@@ -609,9 +605,6 @@ footer div a:hover {
     font-weight: 400;
     padding: 0.5rem 1.2rem;
     transition: background 0.5s linear;
-  }
-  ul li a:hover {
-    background-color: #E7DCFE;
   }
   #joinSection {
     flex-direction: row;
